@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const User = require("../../models/user");
+const { redirect } = require("react-router-dom");
 
 module.exports = {
   create,

@@ -18,14 +18,15 @@ app.use(express.static(path.join(__dirname, "build")));
 
 // Middleware to check and verify a JWT
 // and assign the user object from the JWT to req.user
-app.use(require('./config/checkToken'));
+app.use(require("./config/checkToken"));
 
 // Configure to use port 3001 instead of 3000 during
 // development to avoid collision with React's dev server
 const port = process.env.PORT || 3001;
 
 // Put API routes here, before the "catch all" route
-app.use('/api/users', require('./routes/api/users'));
+app.use("/api/users", require("./routes/api/users"));
+app.use("/api/notes", require("./routes/api/notes"));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
