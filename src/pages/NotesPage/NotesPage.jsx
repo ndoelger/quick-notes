@@ -16,6 +16,7 @@ export default function NotesPage() {
   useEffect(() => {
     getNotes();
   }, []);
+  
   return (
     <>
       <h1>Add a Note</h1>
